@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Front Game Studios</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+      color: #fff;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    header {
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin: 0;
+      color: #00ffcc;
+    }
+
+    h2 {
+      margin: 15px 0;
+      color: #ffdd57;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    /* Price */
+    .price {
+      font-size: 1.6rem;
+      margin: 15px 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #bbb;
+      margin-right: 8px;
+    }
+    .new-price {
+      color: #00ff99;
+      font-weight: bold;
+    }
+
+    /* Timer */
+    .timer {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ff3b3b;
+      margin-bottom: 20px;
+    }
+
+    /* Buttons */
+    .cta-btn {
+      display: inline-block;
+      background: #00ff99;
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 10px 0;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background: #00cc77;
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      padding: 16px;
+      font-size: 1.5rem;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+      text-decoration: none;
+    }
+
+    /* Section */
+    section {
+      padding: 30px 20px;
+    }
+
+    /* Demo Video */
+    video {
+      width: 90%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin: 10px auto;
+    }
+
+    /* Projects */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 15px;
+      width: 280px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+    .project-card h3 {
+      margin-top: 10px;
+      color: #ffdd57;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      max-width: 800px;
+      margin: auto;
+    }
+    .testimonial {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    }
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .testimonial h4 {
+      color: #00ffcc;
+      margin: 0;
+    }
+
+    /* Sticky Footer */
+    .sticky-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      padding: 12px;
+      text-align: center;
+    }
+
+    /* FOMO Popup */
+    .popup {
+      position: fixed;
+      left: 20px;
+      bottom: 120px;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      display: none;
+      animation: fadeInOut 4s;
+    }
+    @keyframes fadeInOut {
+      0% {opacity: 0;}
+      10% {opacity: 1;}
+      90% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>First Front Game Studios</h1>
+    <h2>🚀 India's First Hindi Game Development Course</h2>
+    <p>From basics to advanced, with certificate & real projects</p>
+    <div class="price">
+      <span class="old-price">₹1999</span>
+      <span class="new-price">₹499</span>
+    </div>
+    <div class="timer" id="countdown">Offer ends in: 30:00</div>
+    <a href="https://payments.cashfree.com/forms?code=YprU" target="_blank" class="cta-btn">✅ Enroll Now</a>
+  </header>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919053775760?text=Hi%20I%20need%20help%20regarding%20the%20Game%20Dev%20course"
+     class="whatsapp-float" target="_blank">💬</a>
+
+  <!-- Demo -->
+<section style="padding:40px 20px;">
+  <h2 style="text-align:center; color:#FFD700; font-size:1.8rem; margin-bottom:20px;">
+    🎬 Free Demo Class 
+  </h2>
+  <div style="max-width:700px; margin:auto; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+    <iframe width="100%" height="400" 
+      src="https://www.youtube.com/embed/ExrUkIv0U9U" 
+      title="Demo Class"
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- Projects -->
+<section style="padding:40px 20px; background:rgba(255,255,255,0.05);">
+  <h2 style="text-align:center; color:#00ffcc; font-size:1.8rem; margin-bottom:25px;">
+    🎮 My Projects & Work
+  </h2>
+  <div class="projects">
+    
+    <!-- Project 1 -->
+    <div class="project-card">
+      <iframe width="100%" height="200" 
+        src="https://www.youtube.com/embed/yVuZ99Ncoto?si=pGjP7im3Hon7cKlT" 
+        title="AAA Horror Game Whispering Eclipsia"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <h3>AAA Horror Game "Whispering Eclipsia"</h3>
+    </div>
+
+    
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <iframe width="100%" height="200" 
+        src="https://www.youtube.com/embed/jt0xQ5n0MXc" 
+        title="speed level Design"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <h3>Speed Level Design</h3>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .project-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    transition: 0.3s;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.12);
+  }
+  .project-card h3 {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: #ffdd57;
+  }
+</style>
+  <!-- Course Structure -->
+<section style="padding:40px 20px; background:rgba(255,255,255,0.05);">
+  <h2 style="text-align:center; color:#FFD700; font-size:1.8rem; margin-bottom:25px;">
+    📚 Complete Course Structure
+  </h2>
+  <div style="max-width:1000px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:20px; text-align:left;">
+    
+    <div style="background:rgba(255,255,255,0.08); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color:#00ffcc; margin-bottom:8px;">🎮 Module 1: Foundations</h3>
+      <ul style="margin:0; padding-left:20px; color:#ddd;">
+        <li>Unreal Engine Installation</li>
+        <li>Editor Interface & Tools</li>
+        <li>First 3D Environment</li>
+      </ul>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.08); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color:#00ffcc; margin-bottom:8px;">⚡ Module 2: Programming</h3>
+      <ul style="margin:0; padding-left:20px; color:#ddd;">
+        <li>Basics of C++ for Unreal</li>
+        <li>Unreal Blueprint Scripting</li>
+        <li>Connecting C++ with Blueprints</li>
+      </ul>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.08); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color:#00ffcc; margin-bottom:8px;">🕹️ Module 3: Gameplay & Characters</h3>
+      <ul style="margin:0; padding-left:20px; color:#ddd;">
+        <li>Character Design (3D Models)</li>
+        <li>Character Controller & Camera</li>
+        <li>Movement + Jump Animations</li>
+      </ul>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.08); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color:#00ffcc; margin-bottom:8px;">🎬 Module 4: Animation</h3>
+      <ul style="margin:0; padding-left:20px; color:#ddd;">
+        <li>Importing & Rigging Characters</li>
+        <li>Blend Space Animations</li>
+        <li>Attack, Run, Idle Animations</li>
+      </ul>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.08); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color:#00ffcc; margin-bottom:8px;">🌍 Module 5: Level & World Design</h3>
+      <ul style="margin:0; padding-left:20px; color:#ddd;">
+        <li>Lighting & Atmosphere</li>
+        <li>Interactive Objects</li>
+        <li>Building Game Maps</li>
+      </ul>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.08); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color:#00ffcc; margin-bottom:8px;">🚀 Module 6: Advanced Features</h3>
+      <ul style="margin:0; padding-left:20px; color:#ddd;">
+        <li>AI Enemies & NPCs</li>
+        <li>Multiplayer Basics</li>
+        <li>Optimization & Performance</li>
+      </ul>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.08); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3); grid-column:span 2;">
+      <h3 style="color:#00ffcc; margin-bottom:8px;">🏆 Final Project + Teasers</h3>
+      <ul style="margin:0; padding-left:20px; color:#ddd;">
+        <li>Build a Playable 3D Game</li>
+        <li>Create Trailer / Teaser Video</li>
+        <li>Get Certificate of Completion</li>
+        <li>Top Students → Paid Internship Opportunity</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+  <!-- Testimonials -->
+  <section>
+    <h2>🌟 Student Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"This course changed my life! I made my first game within 2 months."</p>
+        <h4>- Rahul</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Finally a Hindi course for game dev, easy to understand and practical."</p>
+        <h4>- Priya</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Certificate + internship opportunity = total value!"</p>
+        <h4>- Amit</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Best investment I ever made. Highly recommend to beginners."</p>
+        <h4>- Neha</h4>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky-footer">
+  <a href="https://payments.cashfree.com/forms?code=YprU" target="_blank" style="color:#000; text-decoration:none;">
+    🔥 Enroll Today for just ₹499 (Limited Seats)
+  </a>
+</div>
+  <!-- FOMO Popup -->
+  <div class="popup" id="popup">⚡ Someone from Mumbai just enrolled!</div>
+
+  <script>
+    // Countdown
+    let time = 30*60;
+    setInterval(()=>{
+      let minutes = Math.floor(time/60);
+      let seconds = time%60;
+      document.getElementById("countdown").innerText = 
+        `Offer ends in: ${minutes}:${seconds<10?'0':''}${seconds}`;
+      if(time>0) time--;
+    },1000);
+
+    // FOMO popup
+    function showPopup(){
+      let popup=document.getElementById("popup");
+      let cities=["Delhi","Mumbai","Bangalore","Chennai","Hyderabad","Kolkata","Pune"];
+      let city=cities[Math.floor(Math.random()*cities.length)];
+      popup.innerText=`⚡ Someone from ${city} just enrolled!`;
+      popup.style.display="block";
+      setTimeout(()=>popup.style.display="none",4000);
+    }
+    setInterval(showPopup,20000);
+  </script>
+
+</body>
+</html>
