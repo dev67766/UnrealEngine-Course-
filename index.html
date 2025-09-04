@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>First Front Game Studios</title>
+  
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '764629639767293'); // <-- apna Pixel ID
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=764629639767293&ev=PageView&noscript=1"/>
+  </noscript>
+  
+
   <style>
     body {
       margin: 0;
@@ -187,7 +206,10 @@
       <span class="new-price">₹499</span>
     </div>
     <div class="timer" id="countdown">Offer ends in: 30:00</div>
-    <a href="https://payments.cashfree.com/forms?code=YprU" target="_blank" class="cta-btn">✅ Enroll Now</a>
+  <a href="https://payments.cashfree.com/forms?code=YprU" 
+   target="_blank" 
+   class="cta-btn"
+   onclick="fbq('track', 'InitiateCheckout');">✅ Enroll Now</a>
   </header>
 
   <!-- Floating WhatsApp -->
@@ -368,9 +390,12 @@
   </section>
 
   <div class="sticky-footer">
-  <a href="https://payments.cashfree.com/forms?code=YprU" target="_blank" style="color:#000; text-decoration:none;">
-    🔥 Enroll Today for just ₹499 (Limited Seats)
-  </a>
+  <a href="https://payments.cashfree.com/forms?code=YprU" 
+   target="_blank" 
+   style="color:#000; text-decoration:none;" 
+   onclick="fbq('track','InitiateCheckout');">
+   🔥 Enroll Today for just ₹499 (Limited Seats)
+</a>
 </div>
   <!-- FOMO Popup -->
   <div class="popup" id="popup">⚡ Someone from Mumbai just enrolled!</div>
